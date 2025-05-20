@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaison Felix Menezes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3><a href="#" class="link">JFM.</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item"><a href="#projects" class="link link--nav">Projects</a></li>
+          <li class="nav__list-item"><a href="#skills" class="link link--nav">Skills</a></li>
+          <li class="nav__list-item"><a href="#contact" class="link link--nav">Contact</a></li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About -->
+      <div class="about center">
+        <h1>Hi, I am <span class="about__name">Jaison Felix Menezes.</span></h1>
+        <h2 class="about__role">A Data & ML Engineer.</h2>
+        <p class="about__desc">
+          I'm a graduate student at California State University, Long Beach, with hands-on experience in building data pipelines, deploying machine learning models, and optimizing cloud infrastructure. I’ve led projects across Amazon, ICICI Lombard, and academic institutions, solving real-world problems in insurance, education, and analytics.
+        </p>
+        <div class="about__contact center">
+          <a href="YOUR_RESUME_LINK_HERE.pdf"><span class="btn btn--outline">Resume</span></a>
+          <a href="https://github.com/YOUR_GITHUB_USERNAME" class="link link--icon" aria-label="github"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/YOUR_LINKEDIN_ID" class="link link--icon" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projects</h2>
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Fraud Detection System</h3>
+            <p class="project__description">
+              Deployed fraud detection models (Random Forest, XGBoost) using Azure Functions for real-time claim processing at ICICI Lombard, reducing fraud case review time by 40%.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">Azure</li>
+              <li class="project__stack-item">ML Models</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>LLM Chatbot for Insurance</h3>
+            <p class="project__description">
+              Architected a Generative AI chatbot using OpenAI, FAISS, and RAG pipeline to simplify complex insurance terms; boosted user engagement by 5%.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">OpenAI</li>
+              <li class="project__stack-item">FAISS</li>
+              <li class="project__stack-item">Python</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>Student Demographics Dashboard</h3>
+            <p class="project__description">
+              Built Power BI dashboards with Databricks-based data for CSULB, enabling academic planning using 40k+ mapped zip codes and institutional datasets.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Databricks</li>
+              <li class="project__stack-item">Power BI</li>
+              <li class="project__stack-item">Python</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">Python</li>
+          <li class="skills__list-item btn btn--plain">SQL</li>
+          <li class="skills__list-item btn btn--plain">PySpark</li>
+          <li class="skills__list-item btn btn--plain">Azure</li>
+          <li class="skills__list-item btn btn--plain">Databricks</li>
+          <li class="skills__list-item btn btn--plain">Power BI</li>
+          <li class="skills__list-item btn btn--plain">MLflow</li>
+          <li class="skills__list-item btn btn--plain">Scikit-learn</li>
+          <li class="skills__list-item btn btn--plain">TensorFlow</li>
+          <li class="skills__list-item btn btn--plain">GCP</li>
+          <li class="skills__list-item btn btn--plain">Docker</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="mailto:jaisonfelix.menezes01@student.csulb.edu">
+          <span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="#" class="link footer__link">Created by Jaison Felix Menezes</a>
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a href="#top" aria-label="Scroll up"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
