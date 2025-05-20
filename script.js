@@ -60,4 +60,42 @@ const scrollUp = () => {
 	}
 }
 
+const roles = [
+    "Data Engineer",
+    "Machine Learning Engineer",
+    "Software Engineer",
+    "Platform & Cloud Engineer"
+  ];
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const speed = 100;
+  const pause = 1500;
+  const typedElement = document.getElementById("typed-role");
+
+  function typeRole() {
+    const currentRole = roles[roleIndex];
+    const currentText = isDeleting
+      ? currentRole.substring(0, charIndex--)
+      : currentRole.substring(0, charIndex++);
+
+    typedElement.textContent = currentText;
+
+    if (!isDeleting && charIndex === currentRole.length + 1) {
+      isDeleting = true;
+      setTimeout(typeRole, pause);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(typeRole, speed);
+    } else {
+      setTimeout(typeRole, isDeleting ? speed / 2 : speed);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typedElement) typeRole();
+  });
+
 document.addEventListener('scroll', scrollUp)
