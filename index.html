@@ -9,7 +9,7 @@
   </head>
   <body class="light" id="top">
     <header class="header center">
-      <div style="width: 3rem;"></div>
+      <h3><a href="#" class="link">JFM.</a></h3>
       <nav class="nav center">
         <ul class="nav__list center">
           <li class="nav__list-item"><a href="#projects" class="link link--nav">Projects</a></li>
@@ -25,149 +25,107 @@
       </nav>
     </header>
 
-   <main>
-  <!-- About -->
-  <div class="about center">
-    <h1>Hi, I am <span class="about__name">Jaison Felix Menezes.</span></h1>
-    <h2 class="about__role"><span id="typed-role"></span></h2>
-    <p class="about__desc">
-      I'm a graduate student at California State University, Long Beach, with hands-on experience in building data pipelines, deploying machine learning models, and optimizing cloud infrastructure. I’ve led projects at Amazon, ICICI Lombard, Cloudfronts Technologies, and CSULB, solving real-world problems in insurance, education, and analytics.
-    </p>
-    <div class="about__contact center">
-      <a href="https://drive.google.com/file/d/1EObH0491YJVprQICbvQGmWTACLwEMj-d/view?usp=drive_link"
-     class="link link--icon" aria-label="resume" target="_blank" rel="noopener noreferrer">
-    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSv46KD9Kn_eBMZ1dIqbxjG4jTV9CfqMbfY6xE_OHBQjb4zIypd" alt="Resume Icon" style="height: 1.4rem; width: auto; vertical-align: middle;" />
-    </a>
-      <a href="https://github.com/JAIS0N" class="link link--icon" aria-label="github"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/jaisonmenezes/" class="link link--icon" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </div>
-
-  <!-- Education -->
-  <section class="section education" id="education">
-    <h2 class="section__title">Education</h2>
-
-    <div class="project center" style="gap: 2rem;">
-      <img src="https://upload.wikimedia.org/wikipedia/en/f/f5/CSU-Longbeach_seal.svg"
-           alt="CSULB Logo"
-           class="logo-theme-aware"
-           style="height: 8rem;" />
-      <div>
-        <h3>California State University, Long Beach</h3>
-        <p><strong>Master of Science, Information Systems</strong> – May 2026 (Expected)</p>
+    <main>
+      <!-- About -->
+      <div class="about center">
+        <h1>Hi, I am <span class="about__name">Jaison Felix Menezes.</span></h1>
+        <h2 class="about__role"><span id="typed-role"></span></h2>
+        <p class="about__desc">
+          I'm a graduate student at California State University, Long Beach, with hrance, education, and anands-on experience in building data pipelines, deploying machine learning models, and optimizing cloud infrastructure. I’ve led projects across ICICI Lombard, Cloudfronts and academic institutions, solving real-world problems.
+        </p>
+        <div class="about__contact center">
+          <a href="https://drive.google.com/file/d/1EObH0491YJVprQICbvQGmWTACLwEMj-d/view?usp=drive_link"
+             class="link link--icon resume-icon"
+             aria-label="resume"
+             target="_blank"
+             rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 384 512"
+                 style="height: 1.4rem; width: auto; vertical-align: middle; fill: currentColor;">
+              <path d="M64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16l160 0 0 80c0 17.7 14.3 32 32 32l80 0 0 288c0 8.8-7.2 16-16 16L64 464zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-293.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0L64 0zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/JAIS0N" class="link link--icon" aria-label="github"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/jaisonmenezes/" class="link link--icon" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
+        </div>
       </div>
-    </div>
 
-    <div class="project center" style="gap: 2rem;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/University_of_Mumbai_coat_of_arms.svg/600px-University_of_Mumbai_coat_of_arms.svg.png"
-           alt="MU Logo"
-           class="logo-theme-aware"
-           style="height: 8rem;" />
-      <div>
-        <h3>University of Mumbai</h3>
-        <p><strong>Bachelor of Engineering, Computer Engineering</strong> – October 2020</p>
-      </div>
-    </div>
-  </section>
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projects</h2>
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Fraud Detection System</h3>
+            <p class="project__description">
+              Deployed fraud detection models (Random Forest, XGBoost) using Azure Functions for real-time claim processing at ICICI Lombard, reducing fraud case review time by 40%.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">Azure</li>
+              <li class="project__stack-item">ML Models</li>
+            </ul>
+          </div>
 
-  <!-- Experience -->
-  <section class="section experience" id="experience">
-    <h2 class="section__title">Experience</h2>
+          <div class="project">
+            <h3>LLM Chatbot for Insurance</h3>
+            <p class="project__description">
+              Architected a Generative AI chatbot using OpenAI, FAISS, and RAG pipeline to simplify complex insurance terms; boosted user engagement by 5%.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">OpenAI</li>
+              <li class="project__stack-item">FAISS</li>
+              <li class="project__stack-item">Python</li>
+            </ul>
+          </div>
 
-    <div class="project center" style="gap: 2rem; align-items: flex-start;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
-           alt="Amazon Logo"
-           class="logo-theme-aware"
-           style="height: 3rem;" />
-      <div>
-        <h3>Business Intelligence Engineering Intern – Amazon, Bellevue, WA</h3>
-        <p><em>May 2025 – August 2025</em></p>
-      </div>
-    </div>
+          <div class="project">
+            <h3>Student Demographics Dashboard</h3>
+            <p class="project__description">
+              Built Power BI dashboards with Databricks-based data for CSULB, enabling academic planning using 40k+ mapped zip codes and institutional datasets.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Databricks</li>
+              <li class="project__stack-item">Power BI</li>
+              <li class="project__stack-item">Python</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    <div class="project center" style="gap: 2rem; align-items: flex-start;">
-      <img src="https://upload.wikimedia.org/wikipedia/en/f/f5/CSU-Longbeach_seal.svg"
-           alt="CSULB Logo"
-           class="logo-theme-aware"
-           style="height: 3rem;" />
-      <div>
-        <h3>Data Engineer – CSULB, Office of Institutional Research & Analytics</h3>
-        <p><em>January 2025 – May 2025</em></p>
-        <ul>
-          <li>Built ELT pipelines using Databricks and Spark, integrating 20+ GB of U.S. data for academic insights.</li>
-          <li>Created Power BI dashboards visualizing enrollment trends and demographics.</li>
-          <li>Automated quarterly faculty file processing using SQL, reducing manual work by 70%.</li>
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">Python</li>
+          <li class="skills__list-item btn btn--plain">SQL</li>
+          <li class="skills__list-item btn btn--plain">PySpark</li>
+          <li class="skills__list-item btn btn--plain">Azure</li>
+          <li class="skills__list-item btn btn--plain">Databricks</li>
+          <li class="skills__list-item btn btn--plain">Power BI</li>
+          <li class="skills__list-item btn btn--plain">MLflow</li>
+          <li class="skills__list-item btn btn--plain">Scikit-learn</li>
+          <li class="skills__list-item btn btn--plain">TensorFlow</li>
+          <li class="skills__list-item btn btn--plain">GCP</li>
+          <li class="skills__list-item btn btn--plain">Docker</li>
         </ul>
-      </div>
-    </div>
+      </section>
 
-    <div class="project center" style="gap: 2rem; align-items: flex-start;">
-      <img src="https://companieslogo.com/img/orig/ICICIL.NS-6e3a5074.png"
-           alt="ICICI Lombard Logo"
-           class="logo-theme-aware"
-           style="height: 3rem;" />
-      <div>
-        <h3>Data Engineer – ICICI Lombard General Insurance, Mumbai</h3>
-        <p><em>January 2023 – August 2024</em></p>
-        <ul>
-          <li>Built scalable ETL pipelines and deployed fraud detection models using Azure Functions.</li>
-          <li>Designed a GenAI chatbot using OpenAI + FAISS to simplify insurance terms.</li>
-          <li>Saved $50K annually by optimizing Azure cloud usage and automating cost controls.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="project center" style="gap: 2rem; align-items: flex-start;">
-      <img src="https://via.placeholder.com/100?text=Cloudfronts"
-           alt="Cloudfronts Logo"
-           class="logo-theme-aware"
-           style="height: 3rem;" />
-      <div>
-        <h3>Associate Software Engineer – Cloudfronts Technologies, Mumbai</h3>
-        <p><em>August 2020 – January 2023</em></p>
-        <ul>
-          <li>Migrated 100+ systems to Azure cloud using Data Factory, Synapse, and Power BI.</li>
-          <li>Developed APIs and built CI/CD pipelines for secure, cross-platform data access.</li>
-          <li>Boosted Power BI performance by optimizing SQL views and stored procedures.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section class="section skills" id="skills">
-    <h2 class="section__title">Skills</h2>
-    <ul class="skills__list">
-      <li class="skills__list-item btn btn--plain">Python</li>
-      <li class="skills__list-item btn btn--plain">SQL</li>
-      <li class="skills__list-item btn btn--plain">PySpark</li>
-      <li class="skills__list-item btn btn--plain">Azure</li>
-      <li class="skills__list-item btn btn--plain">Databricks</li>
-      <li class="skills__list-item btn btn--plain">Power BI</li>
-      <li class="skills__list-item btn btn--plain">MLflow</li>
-      <li class="skills__list-item btn btn--plain">TensorFlow</li>
-      <li class="skills__list-item btn btn--plain">Docker</li>
-      <li class="skills__list-item btn btn--plain">GCP</li>
-      <li class="skills__list-item btn btn--plain">Scikit-learn</li>
-    </ul>
-  </section>
-
-  <!-- Contact -->
-  <section class="section contact center" id="contact">
-    <h2 class="section__title">Contact</h2>
-    <a href="mailto:jaisonfelix.menezes01@student.csulb.edu"
-       class="link link--icon email-icon"
-       aria-label="email"
-       target="_blank"
-       rel="noopener noreferrer">
-      <svg xmlns="http://www.w3.org/2000/svg"
-           viewBox="0 0 512 512"
-           style="height: 1.4rem; width: auto; vertical-align: middle; fill: currentColor;">
-        <path d="M64 112c-8.8 0-16 7.2-16 16v22.1l172.5 141.6c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2z"/>
-      </svg>
-    </a>
-  </section>
-</main>
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="mailto:jaisonfelix.menezes01@student.csulb.edu"
+   class="link link--icon email-icon"
+   aria-label="email"
+   target="_blank"
+   rel="noopener noreferrer">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 512 512"
+       style="height: 1.4rem; width: auto; vertical-align: middle; fill: currentColor;">
+    <path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/>
+  </svg>
+</a>
+      </section>
+    </main>
 
     <footer class="footer">
       <a href="#" class="link footer__link">Created by Jaison Felix Menezes</a>
