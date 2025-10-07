@@ -61,9 +61,9 @@ const scrollUp = () => {
 }
 
 const roles = [
-    "Data Engineer",
-    "Machine Learning Engineer",
     "Software Engineer",
+    "Machine Learning Engineer",
+    "Data and Infrastructure Engineer",
     "Platform & Cloud Engineer"
   ];
 
