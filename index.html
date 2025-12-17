@@ -255,30 +255,81 @@
     <section id="projects" aria-labelledby="proj-title">
       <h2 class="section__title" id="proj-title">Selected Projects</h2>
       <div class="grid grid--2">
+        <!-- FinReport AI -->
         <article class="card">
           <h3>FinReport AI</h3>
           <p class="meta">Python · Flask · Hugging Face · RAG · BeautifulSoup · PostgreSQL · Docker (Jan–Apr 2025)</p>
           <ul class="list">
-            <li>NLP analytics on SEC filings & news using BERT/GPT + retrieval‑augmented generation for grounded insights.</li>
+            <li>NLP analytics on SEC filings and news using BERT/GPT with retrieval-augmented generation for grounded insights.</li>
             <li>Modular API with dynamic model selection and prompt tuning; containerized for scale.</li>
           </ul>
           <div class="chips" aria-label="Tech stack">
-            <span class="chip">Python</span><span class="chip">Transformers</span><span class="chip">RAG</span><span class="chip">PostgreSQL</span>
+            <span class="chip">Python</span>
+            <span class="chip">Transformers</span>
+            <span class="chip">RAG</span>
+            <span class="chip">PostgreSQL</span>
           </div>
+          <p style="margin-top:0.75rem">
+            <a class="btn secondary" href="https://github.com/JAIS0N/FinReport-AI" target="_blank" rel="noopener">
+              View on GitHub
+            </a>
+          </p>
         </article>
+
+        <!-- MapVoyager -->
         <article class="card">
           <h3>MapVoyager</h3>
           <p class="meta">Next.js · Node.js · MongoDB · AWS Lambda · Leaflet · Redis · Docker (Mar–Jun 2024)</p>
           <ul class="list">
             <li>Interactive mapping with OSM/Leaflet for live tracking and route optimization.</li>
-            <li>Serverless compute on Lambda; Redis for low‑latency caching; SSR for performance.</li>
+            <li>Serverless compute on Lambda; Redis for low-latency caching; SSR for performance.</li>
           </ul>
           <div class="chips" aria-label="Tech stack">
-            <span class="chip">Next.js</span><span class="chip">Leaflet</span><span class="chip">AWS</span><span class="chip">Redis</span>
+            <span class="chip">Next.js</span>
+            <span class="chip">Leaflet</span>
+            <span class="chip">AWS</span>
+            <span class="chip">Redis</span>
           </div>
+        </article>
+
+        <!-- MovieHub -->
+        <article class="card">
+          <h3>MovieHub</h3>
+          <p class="meta">React · Node.js/Express · MongoDB Atlas · Redis · Gemini · Docker · Vercel · Render</p>
+          <ul class="list">
+            <li>
+              Built a full-stack movie discovery platform with advanced search, watchlists, favourites, OTT availability,
+              Google OAuth login, and Redis-optimized caching.
+            </li>
+            <li>
+              Implemented an ML-based movie recommender using cosine similarity on genre, keywords, and metadata vectors.
+            </li>
+            <li>
+              Integrated a Gemini-powered AI assistant for contextual movie insights, containerized backend services with Docker,
+              and deployed a scalable architecture (Vercel frontend, Render backend, MongoDB Atlas) with production-ready routing,
+              security, and performance tuning.
+            </li>
+          </ul>
+          <div class="chips" aria-label="Tech stack">
+            <span class="chip">React</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">MongoDB Atlas</span>
+            <span class="chip">Redis</span>
+            <span class="chip">Gemini</span>
+            <span class="chip">Docker</span>
+          </div>
+          <p style="margin-top:0.75rem; display:flex; flex-wrap:wrap; gap:.5rem">
+            <a class="btn secondary" href="https://github.com/JAIS0N/netflix-clone-mern" target="_blank" rel="noopener">
+              GitHub Repo
+            </a>
+            <a class="btn secondary" href="https://netflix-clone-mern-three.vercel.app/" target="_blank" rel="noopener">
+              Live Demo
+            </a>
+          </p>
         </article>
       </div>
     </section>
+
 
     <!-- Skills -->
     <section id="skills" aria-labelledby="skills-title">
