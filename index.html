@@ -288,20 +288,51 @@
           </p>
         </article>
 
-        <!-- MapVoyager -->
         <article class="card">
-          <h3>MapVoyager</h3>
-          <p class="meta">Next.js · Node.js · MongoDB · AWS Lambda · Leaflet · Redis · Docker (Mar–Jun 2024)</p>
-          <ul class="list">
-            <li>Interactive mapping with OSM/Leaflet for live tracking and route optimization.</li>
-            <li>Serverless compute on Lambda; Redis for low-latency caching; SSR for performance.</li>
-          </ul>
-          <div class="chips" aria-label="Tech stack">
-            <span class="chip">Next.js</span>
-            <span class="chip">Leaflet</span>
-            <span class="chip">AWS</span>
-            <span class="chip">Redis</span>
-          </div>
+            <h3>Yahoo Finance MCP Server</h3>
+            <p class="meta">
+              Python 3.14 · Model Context Protocol (MCP) · yfinance · Claude Desktop · uv
+              (Mar 2026)
+            </p>
+          
+            <ul class="list">
+              <li>
+                Built a custom <strong>Model Context Protocol (MCP) server</strong> that integrates
+                Claude Desktop with live Yahoo Finance market data.
+              </li>
+              <li>
+                Exposed production-ready tools including
+                <strong>real-time stock price retrieval</strong>,
+                <strong>historical CSV export</strong>, and
+                <strong>multi-stock comparison</strong>.
+              </li>
+              <li>
+                Designed structured tool interfaces over
+                <strong>stdin/stdout MCP transport</strong> enabling Claude to
+                programmatically query financial data.
+              </li>
+              <li>
+                Packaged using modern Python tooling (<strong>uv</strong>, pyproject.toml),
+                with modular server architecture for maintainability.
+              </li>
+            </ul>
+          
+            <div class="chips" aria-label="Tech stack">
+              <span class="chip">Python</span>
+              <span class="chip">MCP</span>
+              <span class="chip">Claude</span>
+              <span class="chip">yfinance</span>
+              <span class="chip">Tooling APIs</span>
+            </div>
+          
+            <p style="margin-top:0.75rem">
+              <a class="btn secondary"
+                 href="https://github.com/JAIS0N/yahoo-finance-mcp-server"
+                 target="_blank"
+                 rel="noopener">
+                View on GitHub
+              </a>
+            </p>
         </article>
 
         <!-- MovieHub -->
@@ -339,8 +370,26 @@
             </a>
           </p>
         </article>
+                <!-- MapVoyager -->
+        <article class="card">
+          <h3>MapVoyager</h3>
+          <p class="meta">Next.js · Node.js · MongoDB · AWS Lambda · Leaflet · Redis · Docker (Mar–Jun 2024)</p>
+          <ul class="list">
+            <li>Interactive mapping with OSM/Leaflet for live tracking and route optimization.</li>
+            <li>Serverless compute on Lambda; Redis for low-latency caching; SSR for performance.</li>
+          </ul>
+          <div class="chips" aria-label="Tech stack">
+            <span class="chip">Next.js</span>
+            <span class="chip">Leaflet</span>
+            <span class="chip">AWS</span>
+            <span class="chip">Redis</span>
+          </div>
+        </article>
+        
       </div>
     </section>
+
+    
 
 
     <!-- Skills -->
