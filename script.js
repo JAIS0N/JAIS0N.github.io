@@ -1,101 +1,138 @@
-const body = document.body
+/* ===============================
+   CLEANED + STABLE VERSION
+================================ */
 
-const btnTheme = document.querySelector('.fa-moon')
-const btnHamburger = document.querySelector('.fa-bars')
+document.addEventListener("DOMContentLoaded", () => {
 
-const addThemeClass = (bodyClass, btnClass) => {
-  body.classList.add(bodyClass)
-  btnTheme.classList.add(btnClass)
-}
+  const body = document.body;
 
-const getBodyTheme = localStorage.getItem('portfolio-theme')
-const getBtnTheme = localStorage.getItem('portfolio-btn-theme')
+  /* =========================
+     THEME TOGGLE
+  ========================== */
 
-addThemeClass(getBodyTheme, getBtnTheme)
+  const themeBtn = document.getElementById("theme-toggle");
+  const themeIcon = themeBtn?.querySelector("i");
 
-const isDark = () => body.classList.contains('dark')
+  const storedTheme = localStorage.getItem("portfolio-theme");
 
-const setTheme = (bodyClass, btnClass) => {
+  // Default theme
+  if (storedTheme) {
+    body.classList.add(storedTheme);
+    updateIcon(storedTheme);
+  } else {
+    body.classList.add("dark"); // default
+    updateIcon("dark");
+  }
 
-	body.classList.remove(localStorage.getItem('portfolio-theme'))
-	btnTheme.classList.remove(localStorage.getItem('portfolio-btn-theme'))
+  function updateIcon(theme) {
+    if (!themeIcon) return;
 
-  addThemeClass(bodyClass, btnClass)
+    themeIcon.classList.remove("fa-moon", "fa-sun");
+    themeIcon.classList.add(theme === "dark" ? "fa-sun" : "fa-moon");
+  }
 
-	localStorage.setItem('portfolio-theme', bodyClass)
-	localStorage.setItem('portfolio-btn-theme', btnClass)
-}
+  themeBtn?.addEventListener("click", () => {
+    const isDark = body.classList.contains("dark");
 
-const toggleTheme = () =>
-	isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun')
+    body.classList.toggle("dark", !isDark);
+    body.classList.toggle("light", isDark);
 
-btnTheme.addEventListener('click', toggleTheme)
+    const newTheme = isDark ? "light" : "dark";
+    localStorage.setItem("portfolio-theme", newTheme);
 
-const displayList = () => {
-	const navUl = document.querySelector('.nav__list')
+    updateIcon(newTheme);
+  });
 
-	if (btnHamburger.classList.contains('fa-bars')) {
-		btnHamburger.classList.remove('fa-bars')
-		btnHamburger.classList.add('fa-times')
-		navUl.classList.add('display-nav-list')
-	} else {
-		btnHamburger.classList.remove('fa-times')
-		btnHamburger.classList.add('fa-bars')
-		navUl.classList.remove('display-nav-list')
-	}
-}
+  /* =========================
+     HAMBURGER MENU
+  ========================== */
 
-btnHamburger.addEventListener('click', displayList)
+  const hamburgerBtn = document.getElementById("hamburger");
+  const navList = document.querySelector(".nav__list");
+  const hamburgerIcon = hamburgerBtn?.querySelector("i");
 
-const scrollUp = () => {
-	const btnScrollTop = document.querySelector('.scroll-top')
+  hamburgerBtn?.addEventListener("click", () => {
+    navList.classList.toggle("display-nav-list");
 
-	if (
-		body.scrollTop > 500 ||
-		document.documentElement.scrollTop > 500
-	) {
-		btnScrollTop.style.display = 'block'
-	} else {
-		btnScrollTop.style.display = 'none'
-	}
-}
+    const expanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
+    hamburgerBtn.setAttribute("aria-expanded", String(!expanded));
 
-const roles = [
+    hamburgerIcon?.classList.toggle("fa-bars");
+    hamburgerIcon?.classList.toggle("fa-times");
+  });
+
+  // Close nav when clicking link (mobile UX improvement)
+  document.querySelectorAll(".nav__list a").forEach(link => {
+    link.addEventListener("click", () => {
+      navList.classList.remove("display-nav-list");
+      hamburgerBtn?.setAttribute("aria-expanded", "false");
+      hamburgerIcon?.classList.add("fa-bars");
+      hamburgerIcon?.classList.remove("fa-times");
+    });
+  });
+
+  /* =========================
+     SCROLL TO TOP BUTTON
+  ========================== */
+
+  const scrollBtn = document.querySelector(".scroll-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  /* =========================
+     TYPEWRITER EFFECT
+  ========================== */
+
+  const roles = [
     "Software Engineer",
     "Machine Learning Engineer",
-    "Data and Infrastructure Engineer",
+    "Data & Infrastructure Engineer",
     "Platform & Cloud Engineer"
   ];
 
-  let roleIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const speed = 100;
-  const pause = 1500;
   const typedElement = document.getElementById("typed-role");
 
-  function typeRole() {
-    const currentRole = roles[roleIndex];
-    const currentText = isDeleting
-      ? currentRole.substring(0, charIndex--)
-      : currentRole.substring(0, charIndex++);
+  if (typedElement) {
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-    typedElement.textContent = currentText;
+    function typeRole() {
+      const currentRole = roles[roleIndex];
 
-    if (!isDeleting && charIndex === currentRole.length + 1) {
-      isDeleting = true;
-      setTimeout(typeRole, pause);
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      setTimeout(typeRole, speed);
-    } else {
-      setTimeout(typeRole, isDeleting ? speed / 2 : speed);
+      if (!isDeleting) {
+        charIndex++;
+        typedElement.textContent = currentRole.slice(0, charIndex);
+
+        if (charIndex === currentRole.length) {
+          isDeleting = true;
+          setTimeout(typeRole, 1500);
+          return;
+        }
+      } else {
+        charIndex--;
+        typedElement.textContent = currentRole.slice(0, charIndex);
+
+        if (charIndex === 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+        }
+      }
+
+      setTimeout(typeRole, isDeleting ? 40 : 80);
     }
+
+    setTimeout(typeRole, 600);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    if (typedElement) typeRole();
-  });
-
-document.addEventListener('scroll', scrollUp)
+});
