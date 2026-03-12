@@ -264,133 +264,99 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" aria-labelledby="proj-title">
-      <h2 class="section__title" id="proj-title">Selected Projects</h2>
-      <div class="grid grid--2">
-        <!-- FinReport AI -->
-        <article class="card">
-          <h3>FinReport AI</h3>
-          <p class="meta">Python · Flask · Hugging Face · RAG · BeautifulSoup · PostgreSQL · Docker (Jan–Apr 2025)</p>
-          <ul class="list">
-            <li>NLP analytics on SEC filings and news using BERT/GPT with retrieval-augmented generation for grounded insights.</li>
-            <li>Modular API with dynamic model selection and prompt tuning; containerized for scale.</li>
-          </ul>
-          <div class="chips" aria-label="Tech stack">
-            <span class="chip">Python</span>
-            <span class="chip">Transformers</span>
-            <span class="chip">RAG</span>
-            <span class="chip">PostgreSQL</span>
-          </div>
-          <p style="margin-top:0.75rem">
-            <a class="btn secondary" href="https://github.com/JAIS0N/FinReport-AI" target="_blank" rel="noopener">
-              View on GitHub
-            </a>
-          </p>
-        </article>
+   <section id="projects" aria-labelledby="proj-title">
+    <h2 class="section__title" id="proj-title">Selected Projects</h2>
+    <div class="grid grid--2">
 
-        <article class="card">
-            <h3>Yahoo Finance MCP Server</h3>
-            <p class="meta">
-              Python 3.14 · Model Context Protocol (MCP) · yfinance · Claude Desktop · uv
-              (Mar 2026)
-            </p>
-          
-            <ul class="list">
-              <li>
-                Built a custom <strong>Model Context Protocol (MCP) server</strong> that integrates
-                Claude Desktop with live Yahoo Finance market data.
-              </li>
-              <li>
-                Exposed production-ready tools including
-                <strong>real-time stock price retrieval</strong>,
-                <strong>historical CSV export</strong>, and
-                <strong>multi-stock comparison</strong>.
-              </li>
-              <li>
-                Designed structured tool interfaces over
-                <strong>stdin/stdout MCP transport</strong> enabling Claude to
-                programmatically query financial data.
-              </li>
-              <li>
-                Packaged using modern Python tooling (<strong>uv</strong>, pyproject.toml),
-                with modular server architecture for maintainability.
-              </li>
-            </ul>
-          
-            <div class="chips" aria-label="Tech stack">
-              <span class="chip">Python</span>
-              <span class="chip">MCP</span>
-              <span class="chip">Claude</span>
-              <span class="chip">yfinance</span>
-              <span class="chip">Tooling APIs</span>
-            </div>
-          
-            <p style="margin-top:0.75rem">
-              <a class="btn secondary"
-                 href="https://github.com/JAIS0N/yahoo-finance-mcp-server"
-                 target="_blank"
-                 rel="noopener">
-                View on GitHub
-              </a>
-            </p>
-        </article>
-
-        <!-- MovieHub -->
-        <article class="card">
-          <h3>MovieHub</h3>
-          <p class="meta">React · Node.js/Express · MongoDB Atlas · Redis · Gemini · Docker · Vercel · Render</p>
-          <ul class="list">
-            <li>
-              Built a full-stack movie discovery platform with advanced search, watchlists, favourites, OTT availability,
-              Google OAuth login, and Redis-optimized caching.
-            </li>
-            <li>
-              Implemented an ML-based movie recommender using cosine similarity on genre, keywords, and metadata vectors.
-            </li>
-            <li>
-              Integrated a Gemini-powered AI assistant for contextual movie insights, containerized backend services with Docker,
-              and deployed a scalable architecture (Vercel frontend, Render backend, MongoDB Atlas) with production-ready routing,
-              security, and performance tuning.
-            </li>
-          </ul>
-          <div class="chips" aria-label="Tech stack">
-            <span class="chip">React</span>
-            <span class="chip">Node.js</span>
-            <span class="chip">MongoDB Atlas</span>
-            <span class="chip">Redis</span>
-            <span class="chip">Gemini</span>
-            <span class="chip">Docker</span>
-          </div>
-          <p style="margin-top:0.75rem; display:flex; flex-wrap:wrap; gap:.5rem">
-            <a class="btn secondary" href="https://github.com/JAIS0N/netflix-clone-mern" target="_blank" rel="noopener">
-              GitHub Repo
-            </a>
-            <a class="btn secondary" href="https://netflix-clone-mern-three.vercel.app/" target="_blank" rel="noopener">
-              Live Demo
-            </a>
-          </p>
-        </article>
-                <!-- MapVoyager -->
-        <article class="card">
-          <h3>MapVoyager</h3>
-          <p class="meta">Next.js · Node.js · MongoDB · AWS Lambda · Leaflet · Redis · Docker (Mar–Jun 2024)</p>
-          <ul class="list">
-            <li>Interactive mapping with OSM/Leaflet for live tracking and route optimization.</li>
-            <li>Serverless compute on Lambda; Redis for low-latency caching; SSR for performance.</li>
-          </ul>
-          <div class="chips" aria-label="Tech stack">
-            <span class="chip">Next.js</span>
-            <span class="chip">Leaflet</span>
-            <span class="chip">AWS</span>
-            <span class="chip">Redis</span>
-          </div>
-        </article>
-        
+    <!-- FinReport AI -->
+    <article class="card">
+      <img src="https://cdn.simpleicons.org/tradingview/2962FF"
+           alt="Finance analytics logo"
+           style="height:38px; margin-bottom:.6rem;">
+      <h3>FinReport AI</h3>
+      <div class="chips">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="22" alt="Python">
+        <img src="https://cdn.simpleicons.org/postgresql/4169E1" height="22" alt="PostgreSQL">
+        <img src="https://cdn.simpleicons.org/docker/2496ED" height="22" alt="Docker">
       </div>
-    </section>
+      <p class="meta">Python · RAG · Hugging Face · PostgreSQL · Docker</p>
+      <ul class="list">
+        <li>NLP analytics on SEC filings using BERT/GPT with retrieval-augmented generation.</li>
+        <li>Containerized API with dynamic model routing and prompt tuning.</li>
+      </ul>
+      <p>
+        <a class="btn secondary"
+           href="https://github.com/JAIS0N/FinReport-AI"
+           target="_blank">View on GitHub</a>
+      </p>
+    </article>
 
-    
+    <!-- Yahoo Finance MCP -->
+    <article class="card">
+      <img src="https://cdn.simpleicons.org/yahoo/6001D2"
+           alt="Yahoo logo"
+           style="height:38px; margin-bottom:.6rem;">
+      <h3>Yahoo Finance MCP Server</h3>
+      <div class="chips">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="22">
+        <img src="https://cdn.simpleicons.org/yahoo/6001D2" height="22">
+      </div>
+      <p class="meta">Python · MCP · yfinance · Claude API</p>
+      <ul class="list">
+        <li>Built MCP server integrating Claude Desktop with live Yahoo Finance data.</li>
+        <li>Exposed structured tools for real-time prices, CSV export & stock comparison.</li>
+      </ul>
+      <p>
+        <a class="btn secondary"
+           href="https://github.com/JAIS0N/yahoo-finance-mcp-server"
+           target="_blank">View on GitHub</a>
+      </p>
+    </article>
 
+    <!-- MovieHub -->
+    <article class="card">
+      <img src="https://cdn.simpleicons.org/netflix/E50914"
+           alt="Netflix logo"
+           style="height:38px; margin-bottom:.6rem;">
+      <h3>MovieHub</h3>
+      <div class="chips">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="22">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="22">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="22">
+        <img src="https://cdn.simpleicons.org/redis/DC382D" height="22">
+      </div>
+      <p class="meta">React · Node.js · MongoDB · Redis · Docker</p>
+      <ul class="list">
+        <li>Full-stack movie platform with search, watchlists & Google OAuth.</li>
+        <li>ML-based recommender using cosine similarity.</li>
+      </ul>
+      <p>
+        <a class="btn secondary"
+           href="https://github.com/JAIS0N/netflix-clone-mern"
+           target="_blank">GitHub Repo</a>
+      </p>
+    </article>
+
+    <!-- MapVoyager -->
+    <article class="card">
+      <img src="https://cdn.simpleicons.org/googlemaps/4285F4"
+           alt="Google Maps logo"
+           style="height:38px; margin-bottom:.6rem;">
+      <h3>MapVoyager</h3>
+      <div class="chips">
+        <img src="https://cdn.simpleicons.org/nextdotjs/000000" height="22">
+        <img src="https://cdn.simpleicons.org/amazonaws/FF9900" height="22">
+        <img src="https://cdn.simpleicons.org/openstreetmap/7EBC6F" height="22">
+      </div>
+      <p class="meta">Next.js · AWS Lambda · Redis · Leaflet</p>
+      <ul class="list">
+        <li>Live route optimization & tracking using OSM/Leaflet.</li>
+        <li>Serverless backend with Redis caching.</li>
+      </ul>
+    </article>
+  
+    </div>
+  </section>
 
     <!-- Skills -->
     <section id="skills" aria-labelledby="skills-title">
