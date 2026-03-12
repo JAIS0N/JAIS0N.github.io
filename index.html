@@ -294,8 +294,25 @@
       <h3>Yahoo Finance MCP Server</h3>
       <p class="meta">Python · MCP · yfinance · Claude API</p>
       <ul class="list">
-        <li>Built MCP server integrating Claude Desktop with live Yahoo Finance data.</li>
-        <li>Exposed structured tools for real-time prices, CSV export & stock comparison.</li>
+        <li>
+                Built a custom <strong>Model Context Protocol (MCP) server</strong> that integrates
+                Claude Desktop with live Yahoo Finance market data.
+              </li>
+              <li>
+                Exposed production-ready tools including
+                <strong>real-time stock price retrieval</strong>,
+                <strong>historical CSV export</strong>, and
+                <strong>multi-stock comparison</strong>.
+              </li>
+              <li>
+                Designed structured tool interfaces over
+                <strong>stdin/stdout MCP transport</strong> enabling Claude to
+                programmatically query financial data.
+              </li>
+              <li>
+                Packaged using modern Python tooling (<strong>uv</strong>, pyproject.toml),
+                with modular server architecture for maintainability.
+              </li>
       </ul>
       <p>
         <a class="btn secondary"
@@ -312,14 +329,23 @@
       <h3>MovieHub</h3>
       <p class="meta">React · Node.js · MongoDB · Redis · Docker</p>
       <ul class="list">
-        <li>Full-stack movie platform with search, watchlists & Google OAuth.</li>
-        <li>ML-based recommender using cosine similarity.</li>
+           <li>
+              Implemented an ML-based movie recommender using cosine similarity on genre, keywords, and metadata vectors.
+            </li>
+            <li>
+              Integrated a Gemini-powered AI assistant for contextual movie insights, containerized backend services with Docker,
+              and deployed a scalable architecture (Vercel frontend, Render backend, MongoDB Atlas) with production-ready routing,
+              security, and performance tuning.
+            </li>
       </ul>
-      <p>
-        <a class="btn secondary"
-           href="https://github.com/JAIS0N/netflix-clone-mern"
-           target="_blank">GitHub Repo</a>
-      </p>
+        <p style="margin-top:0.75rem; display:flex; flex-wrap:wrap; gap:.5rem">
+            <a class="btn secondary" href="https://github.com/JAIS0N/netflix-clone-mern" target="_blank" rel="noopener">
+              GitHub Repo
+            </a>
+            <a class="btn secondary" href="https://netflix-clone-mern-three.vercel.app/" target="_blank" rel="noopener">
+              Live Demo
+            </a>
+          </p>
     </article>
 
     <!-- MapVoyager -->
