@@ -298,4 +298,25 @@ main {
   width: 32px;
   object-fit: contain;
 }
+
+/* ===== LOGO ===== */
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* Logo follows theme text color */
+.brand {
+  color: var(--text);
+}
+
+.logo path {
+  fill: currentColor;
+}
 }
