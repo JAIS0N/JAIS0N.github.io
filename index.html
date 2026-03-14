@@ -547,51 +547,79 @@
     <a href="#top" class="btn-icon" aria-label="Scroll up"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
   </div>
 
-  <script>
-    // Theme toggle with local storage
-    const themeToggle = document.getElementById('theme-toggle');
-    const rootBody = document.body;
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme) rootBody.className = storedTheme;
-    themeToggle?.addEventListener('click', () => {
-      rootBody.classList.toggle('dark');
-      rootBody.classList.toggle('light');
-      localStorage.setItem('theme', rootBody.className);
-    });
+ <script>
+  // Theme toggle with local storage + logo swap
+  const themeToggle = document.getElementById('theme-toggle');
+  const rootBody = document.body;
+  const siteLogo = document.getElementById('site-logo');
 
-    // Hamburger
-    const hamburger = document.getElementById('hamburger');
-    const navList = document.getElementById('nav-list');
-    hamburger?.addEventListener('click', () => {
-      const open = navList.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', String(open));
-    });
-
-    // Typewriter role
-    const roles = [
-      'Software Engineer',
-      'Backend & Distributed Systems',
-      'Data & ML Engineer'
-    ];
-    let roleIndex = 0, charIndex = 0, deleting = false;
-    const typed = document.getElementById('typed-role');
-    function tick() {
-      const current = roles[roleIndex];
-      if (!deleting) {
-        charIndex++;
-        typed.textContent = current.slice(0, charIndex);
-        if (charIndex === current.length) { deleting = true; setTimeout(tick, 1200); return; }
-      } else {
-        charIndex--;
-        typed.textContent = current.slice(0, charIndex);
-        if (charIndex === 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; }
-      }
-      setTimeout(tick, deleting ? 40 : 80);
+  function updateLogo() {
+    if (siteLogo) {
+      siteLogo.src = rootBody.classList.contains('light')
+        ? 'logo-dark.svg'
+        : 'logo.svg';
     }
-    setTimeout(tick, 600);
+  }
 
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  const storedTheme = localStorage.getItem('theme');
+
+  if (storedTheme) {
+    rootBody.className = storedTheme;
+  } else {
+    rootBody.classList.add('dark');
+  }
+
+  updateLogo();
+
+  themeToggle?.addEventListener('click', () => {
+    rootBody.classList.toggle('dark');
+    rootBody.classList.toggle('light');
+    localStorage.setItem('theme', rootBody.className);
+    updateLogo();
+  });
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navList = document.getElementById('nav-list');
+  hamburger?.addEventListener('click', () => {
+    const open = navList.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(open));
+  });
+
+  // Typewriter role
+  const roles = [
+    'Software Engineer',
+    'Backend & Distributed Systems',
+    'Data & ML Engineer'
+  ];
+  let roleIndex = 0, charIndex = 0, deleting = false;
+  const typed = document.getElementById('typed-role');
+
+  function tick() {
+    const current = roles[roleIndex];
+    if (!deleting) {
+      charIndex++;
+      typed.textContent = current.slice(0, charIndex);
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(tick, 1200);
+        return;
+      }
+    } else {
+      charIndex--;
+      typed.textContent = current.slice(0, charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+    }
+    setTimeout(tick, deleting ? 40 : 80);
+  }
+
+  setTimeout(tick, 600);
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
