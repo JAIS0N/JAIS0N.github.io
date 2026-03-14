@@ -8,7 +8,6 @@
   --border: #232531;
   --chip: #1f2230;
   --focus: #93c5fd;
-  --logo-filter: invert(1);
 }
 
 .light {
@@ -21,11 +20,6 @@
   --border: #e5e7eb;
   --chip: #f3f4f6;
   --focus: #2563eb;
-  --logo-filter: invert(0);
-}
-
-.dark {
-  --logo-filter: invert(1);
 }
 
 /* Base */
@@ -123,7 +117,14 @@ header {
   height: 36px;
   width: auto;
   max-height: 36px;
-  filter: var(--logo-filter);
+}
+
+body.dark .logo {
+  filter: invert(0);
+}
+
+body.light .logo {
+  filter: invert(1);
 }
 
 /* Nav */
