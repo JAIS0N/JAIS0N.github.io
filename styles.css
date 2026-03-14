@@ -293,4 +293,9 @@ main {
     flex-direction: column;
     gap: 1.5rem;
   }
+   .logo {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
 }
