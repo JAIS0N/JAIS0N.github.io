@@ -284,9 +284,9 @@
 </section>
 
     <!-- Projects -->
-   <section id="projects" aria-labelledby="proj-title">
-    <h2 class="section__title" id="proj-title">Selected Projects</h2>
-    <div class="grid grid--2">
+  <section id="projects" aria-labelledby="proj-title">
+  <h2 class="section__title" id="proj-title">Selected Projects</h2>
+  <div class="grid grid--2">
 
     <!-- FinReport AI -->
     <article class="card">
@@ -294,15 +294,17 @@
            alt="Finance analytics logo"
            style="height:38px; margin-bottom:.6rem;">
       <h3>FinReport AI</h3>
-      <p class="meta">Python · RAG · Hugging Face · PostgreSQL · Docker</p>
+      <p class="meta">Python · Flask · RAG · Hugging Face · PostgreSQL · Docker</p>
       <ul class="list">
-        <li>NLP analytics on SEC filings using BERT/GPT with retrieval-augmented generation.</li>
-        <li>Containerized API with dynamic model routing and prompt tuning.</li>
+        <li>Built an AI-powered financial research platform that analyzes <strong>SEC filings, earnings narratives, and market signals</strong> using retrieval-augmented generation.</li>
+        <li>Integrated <strong>Hugging Face transformer models</strong> for document understanding, summarization, and question answering over long-form financial text.</li>
+        <li>Designed a modular <strong>Flask API</strong> with dynamic model routing, prompt configuration, and structured response handling for extensible experimentation.</li>
+        <li>Containerized the application with <strong>Docker</strong> and backed it with <strong>PostgreSQL</strong> to support scalable ingestion, persistence, and reproducible local deployment.</li>
       </ul>
       <p>
         <a class="btn secondary"
            href="https://github.com/JAIS0N/FinReport-AI"
-           target="_blank">View on GitHub</a>
+           target="_blank" rel="noopener">View on GitHub</a>
       </p>
     </article>
 
@@ -312,77 +314,40 @@
            alt="Yahoo logo"
            style="height:38px; margin-bottom:.6rem;">
       <h3>Yahoo Finance MCP Server</h3>
-      <p class="meta">Python · MCP · yfinance · Claude API</p>
+      <p class="meta">Python · MCP · yfinance · Claude API · Tooling</p>
       <ul class="list">
-        <li>
-                Built a custom <strong>Model Context Protocol (MCP) server</strong> that integrates
-                Claude Desktop with live Yahoo Finance market data.
-              </li>
-              <li>
-                Exposed production-ready tools including
-                <strong>real-time stock price retrieval</strong>,
-                <strong>historical CSV export</strong>, and
-                <strong>multi-stock comparison</strong>.
-              </li>
-              <li>
-                Designed structured tool interfaces over
-                <strong>stdin/stdout MCP transport</strong> enabling Claude to
-                programmatically query financial data.
-              </li>
-              <li>
-                Packaged using modern Python tooling (<strong>uv</strong>, pyproject.toml),
-                with modular server architecture for maintainability.
-              </li>
+        <li>Built a custom <strong>Model Context Protocol (MCP) server</strong> that connects Claude Desktop with live Yahoo Finance data for interactive financial analysis.</li>
+        <li>Implemented reusable tools for <strong>real-time quote lookup, historical price retrieval, CSV export, and multi-stock comparison</strong> through structured tool interfaces.</li>
+        <li>Designed the server over <strong>stdin/stdout MCP transport</strong>, enabling AI clients to invoke market-data operations programmatically with clean request-response contracts.</li>
+        <li>Packaged the project using modern Python tooling with <strong>uv</strong> and a modular architecture to improve maintainability, local development, and extensibility.</li>
       </ul>
       <p>
         <a class="btn secondary"
            href="https://github.com/JAIS0N/yahoo-finance-mcp-server"
-           target="_blank">View on GitHub</a>
+           target="_blank" rel="noopener">View on GitHub</a>
       </p>
     </article>
-   <!-- Ygithub MCP -->
+
+    <!-- GitHub MCP -->
     <article class="card">
-        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-             alt="GitHub logo"
-             style="height:38px; margin-bottom:.6rem;">
-        <h3>GitHub MCP Server – Intelligent Repository Automation via Claude</h3>
-        <p class="meta">
-          Python · MCP · PyGithub · uv · REST API · Automation · Claude Desktop
-        </p>
-        <ul class="list">
-          <li>
-            Built a custom <strong>Model Context Protocol (MCP)</strong> server that integrates
-            Claude Desktop directly with the <strong>GitHub API</strong> for intelligent
-            repository interaction and automation.
-          </li>
-          <li>
-            Implemented secure GitHub authentication using <strong>Personal Access Tokens</strong>
-            loaded via environment variables with <strong>python-dotenv</strong>.
-          </li>
-          <li>
-            Developed tools to fetch <strong>user bios, repository file structures (recursive),
-            and raw file contents</strong> dynamically from any GitHub repository.
-          </li>
-          <li>
-            Enabled automated <strong>branch creation, pull request generation, and issue creation</strong>
-            using the <strong>PyGithub</strong> SDK with structured error handling.
-          </li>
-          <li>
-            Configured production-ready local execution using <strong>uv project environments</strong>
-            to ensure dependency isolation and seamless integration with Claude Desktop.
-          </li>
-          <li>
-            Designed the system to support scalable repository analysis, automation workflows,
-            and AI-assisted codebase exploration.
-          </li>
-        </ul>
-        <p>
-          <a class="btn secondary"
-             href="https://github.com/JAIS0N/github-mcp-server-py"
-             target="_blank" rel="noopener">
-             View on GitHub
-          </a>
-        </p>
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+           alt="GitHub logo"
+           style="height:38px; margin-bottom:.6rem;">
+      <h3>GitHub MCP Server</h3>
+      <p class="meta">Python · MCP · PyGithub · REST API · Claude Desktop · Automation</p>
+      <ul class="list">
+        <li>Developed a custom <strong>MCP server</strong> that lets Claude Desktop interact directly with the <strong>GitHub API</strong> for repository exploration and workflow automation.</li>
+        <li>Implemented tools to fetch <strong>repository structures, file contents, user metadata, branch details, and issue information</strong> across public GitHub projects.</li>
+        <li>Enabled automation workflows including <strong>branch creation, pull request generation, and issue creation</strong> using the <strong>PyGithub</strong> SDK with structured error handling.</li>
+        <li>Secured authentication through <strong>Personal Access Tokens</strong> and packaged the server with modern Python project tooling for isolated, production-ready local execution.</li>
+      </ul>
+      <p>
+        <a class="btn secondary"
+           href="https://github.com/JAIS0N/github-mcp-server-py"
+           target="_blank" rel="noopener">
+           View on GitHub
+        </a>
+      </p>
     </article>
 
     <!-- MovieHub -->
@@ -391,71 +356,47 @@
            alt="Netflix logo"
            style="height:38px; margin-bottom:.6rem;">
       <h3>MovieHub</h3>
-      <p class="meta">React · Node.js · MongoDB · Redis · Docker</p>
+      <p class="meta">React · Node.js · MongoDB · Redis · Docker · Gemini AI</p>
       <ul class="list">
-           <li>
-              Implemented an ML-based movie recommender using cosine similarity on genre, keywords, and metadata vectors.
-            </li>
-            <li>
-              Integrated a Gemini-powered AI assistant for contextual movie insights, containerized backend services with Docker,
-              and deployed a scalable architecture (Vercel frontend, Render backend, MongoDB Atlas) with production-ready routing,
-              security, and performance tuning.
-            </li>
+        <li>Built a full-stack movie discovery platform with <strong>search, watchlists, OTT availability, and personalized recommendations</strong> inspired by modern streaming applications.</li>
+        <li>Implemented an ML-based recommender using <strong>cosine similarity</strong> over genre, keyword, and metadata feature vectors to deliver relevant movie suggestions.</li>
+        <li>Integrated a <strong>Gemini-powered assistant</strong> to provide contextual movie insights, summaries, and conversational recommendations within the user experience.</li>
+        <li>Deployed a scalable architecture using <strong>Vercel</strong> for the frontend, <strong>Render</strong> for backend services, and <strong>MongoDB Atlas + Redis</strong> for persistence and caching.</li>
       </ul>
-        <p style="margin-top:0.75rem; display:flex; flex-wrap:wrap; gap:.5rem">
-            <a class="btn secondary" href="https://github.com/JAIS0N/netflix-clone-mern" target="_blank" rel="noopener">
-              GitHub Repo
-            </a>
-            <a class="btn secondary" href="https://netflix-clone-mern-three.vercel.app/" target="_blank" rel="noopener">
-              Live Demo
-            </a>
-          </p>
+      <p style="margin-top:0.75rem; display:flex; flex-wrap:wrap; gap:.5rem">
+        <a class="btn secondary" href="https://github.com/JAIS0N/netflix-clone-mern" target="_blank" rel="noopener">
+          GitHub Repo
+        </a>
+        <a class="btn secondary" href="https://netflix-clone-mern-three.vercel.app/" target="_blank" rel="noopener">
+          Live Demo
+        </a>
+      </p>
     </article>
 
-    <!-- Azure -->
-      <!-- Azure Real-Time Weather Analytics & Alerting System -->
-    <!-- Azure Real-Time Weather Analytics & Alerting System -->
-<article class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg"
-       alt="Microsoft Azure logo"
-       style="height:38px; margin-bottom:.6rem;">
-  <h3>Azure Real-Time Weather Analytics & Alerting System</h3>
-  <p class="meta">
-    Azure · Databricks · Functions · Event Hub · Microsoft Fabric · KQL · Power BI
-  </p>
-  <ul class="list">
-    <li>
-      Built an end-to-end real-time weather data pipeline that continuously ingests,
-      streams, and analyzes weather data from a public Weather API.
-    </li>
-    <li>
-      Implemented scheduled ingestion using <strong>Azure Functions</strong> and
-      streaming pipelines with <strong>Azure Databricks</strong> into
-      <strong>Azure Event Hub</strong>.
-    </li>
-    <li>
-      Processed streaming events in <strong>Microsoft Fabric Event Stream</strong>
-      and stored them in <strong>KQL (Kusto) DB</strong> for real-time querying.
-    </li>
-    <li>
-      Designed a live <strong>Power BI</strong> dashboard delivering continuously
-      updated analytics and alerting insights.
-    </li>
-    <li>
-      Secured secrets and access using <strong>Azure Key Vault</strong> and
-      Managed Identity with role-based access control (RBAC).
-    </li>
-  </ul>
-  <p>
-    <a class="btn secondary"
-       href="https://github.com/JAIS0N/Azure-Real-Time-Weather-Analytics-Alerting-System"
-       target="_blank" rel="noopener">
-       View on GitHub
-    </a>
-  </p>
-</article>
-    </div>
-  </section>
+    <!-- Azure Weather -->
+    <article class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg"
+           alt="Microsoft Azure logo"
+           style="height:38px; margin-bottom:.6rem;">
+      <h3>Azure Real-Time Weather Analytics & Alerting System</h3>
+      <p class="meta">Azure · Databricks · Event Hub · Functions · Fabric · KQL · Power BI</p>
+      <ul class="list">
+        <li>Built an end-to-end <strong>real-time weather analytics pipeline</strong> that continuously ingests, processes, and visualizes live weather signals from a public API.</li>
+        <li>Implemented scheduled ingestion with <strong>Azure Functions</strong> and streaming transformations with <strong>Azure Databricks</strong> to publish events into <strong>Azure Event Hub</strong>.</li>
+        <li>Processed streaming data through <strong>Microsoft Fabric Eventstream</strong> and stored it in <strong>KQL (Kusto) databases</strong> for low-latency querying and analytics.</li>
+        <li>Designed a live <strong>Power BI dashboard</strong> with near-real-time reporting and secured the platform using <strong>Azure Key Vault</strong>, managed identities, and role-based access control.</li>
+      </ul>
+      <p>
+        <a class="btn secondary"
+           href="https://github.com/JAIS0N/Azure-Real-Time-Weather-Analytics-Alerting-System"
+           target="_blank" rel="noopener">
+           View on GitHub
+        </a>
+      </p>
+    </article>
+
+  </div>
+</section>
 
     <!-- Skills -->
     <section id="skills" aria-labelledby="skills-title">
