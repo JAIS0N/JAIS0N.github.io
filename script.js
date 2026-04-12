@@ -3,7 +3,6 @@
 ================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
-
   const body = document.body;
 
   /* =========================
@@ -15,12 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const storedTheme = localStorage.getItem("portfolio-theme");
 
-  // Default theme
   if (storedTheme) {
     body.classList.add(storedTheme);
     updateIcon(storedTheme);
   } else {
-    body.classList.add("dark"); // default
+    body.classList.add("dark");
     updateIcon("dark");
   }
 
@@ -52,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburgerIcon = hamburgerBtn?.querySelector("i");
 
   hamburgerBtn?.addEventListener("click", () => {
-    navList.classList.toggle("display-nav-list");
+    navList?.classList.toggle("display-nav-list");
 
     const expanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
     hamburgerBtn.setAttribute("aria-expanded", String(!expanded));
@@ -61,10 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburgerIcon?.classList.toggle("fa-times");
   });
 
-  // Close nav when clicking link (mobile UX improvement)
-  document.querySelectorAll(".nav__list a").forEach(link => {
+  document.querySelectorAll(".nav__list a").forEach((link) => {
     link.addEventListener("click", () => {
-      navList.classList.remove("display-nav-list");
+      navList?.classList.remove("display-nav-list");
       hamburgerBtn?.setAttribute("aria-expanded", "false");
       hamburgerIcon?.classList.add("fa-bars");
       hamburgerIcon?.classList.remove("fa-times");
@@ -78,11 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollBtn = document.querySelector(".scroll-top");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 500) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
+    if (!scrollBtn) return;
+    scrollBtn.style.display = window.scrollY > 500 ? "block" : "none";
   });
 
   scrollBtn?.addEventListener("click", () => {
@@ -135,4 +129,15 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeRole, 600);
   }
 
+  /* =========================
+     CARD HOVER LIGHT EFFECT
+  ========================== */
+
+  document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+      card.style.setProperty("--my", `${e.clientY - rect.top}px`);
+    });
+  });
 });
