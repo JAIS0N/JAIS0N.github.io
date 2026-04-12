@@ -1,5 +1,5 @@
 /* ===============================
-   CLEANED + STABLE VERSION
+   CLEANED + FINAL VERSION
 ================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,10 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const themeBtn = document.getElementById("theme-toggle");
   const themeIcon = themeBtn?.querySelector("i");
+  const siteLogo = document.getElementById("site-logo");
 
   const storedTheme = localStorage.getItem("portfolio-theme");
 
-  if (storedTheme) {
+  if (storedTheme === "light" || storedTheme === "dark") {
+    body.classList.remove("light", "dark");
     body.classList.add(storedTheme);
     updateIcon(storedTheme);
   } else {
@@ -24,21 +26,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateIcon(theme) {
     if (!themeIcon) return;
-
     themeIcon.classList.remove("fa-moon", "fa-sun");
     themeIcon.classList.add(theme === "dark" ? "fa-sun" : "fa-moon");
   }
 
+  function updateLogo() {
+    if (!siteLogo) return;
+    siteLogo.src = body.classList.contains("light")
+      ? "logo-dark.svg"
+      : "logo.svg";
+  }
+
+  updateLogo();
+
   themeBtn?.addEventListener("click", () => {
     const isDark = body.classList.contains("dark");
-
-    body.classList.toggle("dark", !isDark);
-    body.classList.toggle("light", isDark);
-
     const newTheme = isDark ? "light" : "dark";
+
+    body.classList.remove("light", "dark");
+    body.classList.add(newTheme);
+
     localStorage.setItem("portfolio-theme", newTheme);
 
     updateIcon(newTheme);
+    updateLogo();
   });
 
   /* =========================
@@ -46,22 +57,22 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================== */
 
   const hamburgerBtn = document.getElementById("hamburger");
-  const navList = document.querySelector(".nav__list");
+  const navList = document.getElementById("nav-list");
   const hamburgerIcon = hamburgerBtn?.querySelector("i");
 
   hamburgerBtn?.addEventListener("click", () => {
-    navList?.classList.toggle("display-nav-list");
+    const open = navList?.classList.toggle("open");
 
-    const expanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
-    hamburgerBtn.setAttribute("aria-expanded", String(!expanded));
+    hamburgerBtn.setAttribute("aria-expanded", String(Boolean(open)));
 
     hamburgerIcon?.classList.toggle("fa-bars");
     hamburgerIcon?.classList.toggle("fa-times");
   });
 
+  // Close menu on link click
   document.querySelectorAll(".nav__list a").forEach((link) => {
     link.addEventListener("click", () => {
-      navList?.classList.remove("display-nav-list");
+      navList?.classList.remove("open");
       hamburgerBtn?.setAttribute("aria-expanded", "false");
       hamburgerIcon?.classList.add("fa-bars");
       hamburgerIcon?.classList.remove("fa-times");
@@ -74,12 +85,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const scrollBtn = document.querySelector(".scroll-top");
 
+  if (scrollBtn) scrollBtn.style.display = "none";
+
   window.addEventListener("scroll", () => {
     if (!scrollBtn) return;
     scrollBtn.style.display = window.scrollY > 500 ? "block" : "none";
   });
 
-  scrollBtn?.addEventListener("click", () => {
+  scrollBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
@@ -136,8 +150,20 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".card").forEach((card) => {
     card.addEventListener("mousemove", (e) => {
       const rect = card.getBoundingClientRect();
-      card.style.setProperty("--mx", `${e.clientX - rect.left}px`);
-      card.style.setProperty("--my", `${e.clientY - rect.top}px`);
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty("--mx", `${x}px`);
+      card.style.setProperty("--my", `${y}px`);
     });
   });
+
+  /* =========================
+     FOOTER YEAR
+  ========================== */
+
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 });
