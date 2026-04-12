@@ -205,71 +205,83 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" aria-labelledby="exp-title">
-      <h2 class="section__title" id="exp-title">Experience</h2>
-      <div class="grid grid--2">
-        <!-- Ancestry -->
-        <article class="card">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/de/b/b2/Ancestry.com_logo.svg" alt="Ancestry logo" class="logo-theme-aware" style="height: 28px" />
-          <h3>Software Engineer, Co-op · Ancestry · Lehi, UT</h3>
-          <p class="meta">Feb 2026 – Present · Python · OpenTelemetry · Model Context Protocol (MCP) · LangChain · Claude API · AWS · CloudWatch</p>
-          <ul class="list">
-            <li>Developing AI-powered migration tools using <strong>LangGraph</strong> and <strong>Claude API.</strong>
-            <li>Building agentic Python <strong>AST parsing engines</strong> using <strong>Model Context Protocol (MCP)</strong> to migrate New Relic and Datadog APM instrumentation to OpenTelemetry with automated validation and rollback safety.</li>
-            <li>Implemented real-time <strong>PII detection and redaction pipelines</strong> using AWS Lambda and CloudWatch Logs to scan and sanitize multi-source log streams for compliance.</li>
-          </ul>
-        </article>
-        <!-- Amazon -->
-        <article class="card">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon logo" class="logo-theme-aware" style="height: 22px" />
-          <h3>Business Intelligence Engineer, Intern · Amazon · Bellevue, WA</h3>
-          <p class="meta">May 2025 – Aug 2025 · SQL · Spark · Redshift · Kinesis · Lambda/Glue · Airflow</p>
-          <ul class="list">
-            <li>Built a labor-optimization service that disaggregates shift schedules into hourly load forecasts — improved granularity and reduced overstaffing by <strong>14%</strong> at a pilot site in 6 weeks.</li>
-            <li>Implemented real-time event processing (Kinesis → Lambda/Glue → Redshift) with durable storage & query APIs; refreshed <strong>7</strong> KPIs in <strong>8–12 minutes</strong> end-to-end vs. 2–3 hours baseline.</li>
-            <li>Productionized A/B evaluation for a First-Mile pre-bagging pilot; ETL (Redshift SQL, Airflow) for touch count/mis-sorts/truck fill rate contributed to ~<strong>8%</strong> fewer touches.</li>
-          </ul>
-        </article>
-        <!-- CSULB OIRA -->
-        <article class="card">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/f/f5/CSU-Longbeach_seal.svg" alt="CSULB seal" class="logo-theme-aware" style="height: 48px" />
-          <h3>Research Assistant · CSULB Research · Long Beach, CA (Part‑time)</h3>
-          <p class="meta">Jan 2025 – Feb 2026 · Python/Flask · Java/Kotlin · Apache Spark (Scala) · Iceberg/Delta</p>
-          <ul class="list">
-            <li>Shipped a WCAG 2.2 AA compliant, parent‑facing Flask app with ARIA attributes and automated accessibility checks.</li>
-            <li>Refactored Java microservices (auth, payments) for distributed deployment; +JUnit/Mockito tests cut bug resolution time by <strong>25%</strong>.</li>
-            <li>Architected ingestion (Databricks Workflows + Spark) moving <strong>20+ GB/day</strong> of Census/IRS/USPS data into Iceberg ACID tables; later migrated to Delta for compaction efficiency.</li>
-            <li>Tuned a Kotlin Android app with live class schedules & charts (MPAndroidChart), adopted by <strong>1,000+</strong> users.</li>
-          </ul>
-        </article>
-        <!-- ICICI -->
-        <article class="card">
-          <img loading="lazy" src="https://cloud9infosystems.com/wp-content/uploads/2024/05/ICICI-Lombard-Logo.png" alt="ICICI Lombard logo" class="logo-theme-aware" style="height: 44px" />
-          <h3>Software Engineer — Data & ML Infrastructure · ICICI Lombard · Mumbai, India</h3>
-          <p class="meta">Jan 2023 – Aug 2024 · PySpark · Databricks · Azure · Cosmos DB · Redis · APIM</p>
-          <ul class="list">
-            <li>Engineered batch + streaming services landing in ADLS Gen2/Delta across 5+ sources (~<strong>1.2M</strong> records/month); <strong>99.9%</strong> successful runs, DLQ &lt;0.1%.</li>
-            <li>Real‑time telematics via Event Hubs (Kafka API) → Cosmos DB; sustained <strong>1.2–1.5K msgs/s</strong>, p95 read ~5 ms, p99 write ~30 ms.</li>
-            <li>Fraud‑scoring REST APIs (RF/XGBoost/LogReg) on Azure Functions behind APIM (rate limits, OAuth2/JWT); manual claim review time −<strong>40%</strong>.</li>
-            <li>Distributed caching (Redis + Bloom filters) across 15+ microservices; DB load −<strong>60%</strong>, API p95 from 250 ms → <strong>70 ms</strong>.</li>
-            <li>Provisioned infra with Terraform; Jenkins caching cut CI/CD times by <strong>40%</strong>.</li>
-          </ul>
-        </article>
-        <!-- CloudFront -->
-        <article class="card">
-          <img loading="lazy" src="https://www.cloudfronts.com/wp-content/uploads/2020/07/Webp.net-resizeimage.png" alt="CloudFront Technologies logo" class="logo-theme-aware" style="height: 60px" />
-          <h3>Software Engineer · CloudFront Technologies (DataFronts) · Jersey City, NJ (Remote)</h3>
-          <p class="meta">Aug 2020 – Jan 2023 · Java (Spring Boot) · Azure App Service · RabbitMQ · Azure DevOps</p>
-          <ul class="list">
-            <li>Built event‑driven microservices integrating CRM (Salesforce/Dynamics) & ERP (SAP/NAV/F&O); zero‑downtime releases via staged slots.</li>
-            <li>Personalization graph in Neo4j + Redis cache → sub‑100 ms recommendations; monitored with Azure Log Analytics.</li>
-            <li>Nightly ERP→CRM sync on AKS (Docker, K8s, Helm): 2M+ rows/run, success 85%→<strong>99.5%</strong>, runtime −<strong>40%</strong>.</li>
-            <li>Implemented API Gateway controls (APIM rate limiting + throttling) and secure auth (OAuth2, TLS); served 2,000+ active users.</li>
-            <li>DRI for production data services; led on‑call rotations, incident triage, and SLA restoration.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+   <section id="experience" aria-labelledby="exp-title">
+  <h2 class="section__title" id="exp-title">Experience</h2>
+  <div class="grid grid--2">
+    <!-- Ancestry -->
+    <article class="card">
+      <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/de/b/b2/Ancestry.com_logo.svg" alt="Ancestry logo" class="logo-theme-aware" style="height: 28px" />
+      <h3>Software Engineer, Co-op · Ancestry · Lehi, UT</h3>
+      <p class="meta">Feb 2026 – Present · Python · OpenTelemetry · MCP · LangGraph · LangFuse · LiteLLM · Claude API · FastAPI · AWS</p>
+      <ul class="list">
+        <li>Built an automated observability auditing tool using <strong>GitHub MCP</strong> and LLM-based analysis to detect missing internal tracing headers across <strong>100+ repositories</strong>, reducing compliance review time by <strong>60%</strong>.</li>
+        <li>Developing <strong>LangGraph-based AI agents</strong> with <strong>LangFuse</strong> tracing, evaluation, and <strong>LiteLLM</strong> multi-provider routing to improve reliability, fallback handling, and cost visibility in production LLM workflows.</li>
+        <li>Accelerated real-time genomic prediction workloads by optimizing a <strong>CNN inference pipeline</strong> with <strong>TorchScript</strong> and exporting models to <strong>ONNX</strong> for high-performance serving.</li>
+        <li>Designed asynchronous <strong>FastAPI</strong> inference endpoints in Python to handle burst traffic with non-blocking I/O and lower end-to-end latency for online prediction services.</li>
+        <li>Implemented real-time <strong>PII detection and redaction pipelines</strong> using AWS services to sanitize multi-source logs before downstream observability and compliance workflows.</li>
+      </ul>
+    </article>
+
+    <!-- Amazon -->
+    <article class="card">
+      <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon logo" class="logo-theme-aware" style="height: 22px" />
+      <h3>Business Intelligence Engineer, Intern · Amazon · Bellevue, WA</h3>
+      <p class="meta">May 2025 – Aug 2025 · SQL · Spark · Redshift · S3 · Lambda · Airflow · Bedrock · QuickSight</p>
+      <ul class="list">
+        <li>Engineered a labor-optimization pipeline using <strong>Spark</strong> and <strong>Redshift SQL</strong> to disaggregate shift schedules into hourly load forecasts, improving planning precision and reducing overstaffing by <strong>14%</strong> at a pilot site.</li>
+        <li>Led the analytics lifecycle for a <strong>First-Mile pre-bagging pilot</strong>, designing A/B measurement frameworks and productionizing ELT workflows to compare operational baselines across touch count, mis-sorts, and truck fill rate.</li>
+        <li>Built real-time event-processing workflows from <strong>Kinesis/S3/Lambda/Airflow</strong> into warehouse analytics, reducing dashboard and KPI refresh latency from hours to minutes.</li>
+        <li>Prototyped an <strong>AI operations assistant</strong> using <strong>Amazon Bedrock</strong> and <strong>QuickSight Q</strong> with dynamic chart generation, reducing time-to-insight by <strong>65%</strong> for area managers.</li>
+        <li>Translated ambiguous operations questions into production-grade data products and metrics used for labor planning, flow analysis, and pilot decision-making.</li>
+      </ul>
+    </article>
+
+    <!-- CSULB -->
+    <article class="card">
+      <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/f/f5/CSU-Longbeach_seal.svg" alt="CSULB seal" class="logo-theme-aware" style="height: 48px" />
+      <h3>Research Assistant · CSULB Research · Long Beach, CA</h3>
+      <p class="meta">Jan 2025 – Feb 2026 · Python · Flask · React · Node.js · Spark · Scala · LightGBM · PyTorch · Iceberg · Delta Lake</p>
+      <ul class="list">
+        <li>Built a <strong>WCAG 2.2-compliant</strong> analytics platform with a modular web architecture and an <strong>LLM-powered natural language query interface</strong> over structured student data.</li>
+        <li>Designed scalable <strong>Spark/Scala ingestion pipelines</strong> to process <strong>20+ GB/day</strong> of Census, IRS, and USPS data into <strong>ACID lakehouse tables</strong> with schema evolution and downstream model readiness.</li>
+        <li>Fine-tuned a <strong>LightGBM</strong> admissions model with feature pipelines and hyperparameter optimization, reducing bias by <strong>14%</strong> without degrading AUC-ROC.</li>
+        <li>Built a <strong>PyTorch</strong> student dropout-risk classifier with class-imbalance handling and threshold calibration, improving <strong>F1 by 20%</strong> and raising predictive performance for intervention use cases.</li>
+        <li>Delivered production-minded software and ML components spanning accessible frontend experiences, backend APIs, data pipelines, and model evaluation workflows.</li>
+      </ul>
+    </article>
+
+    <!-- ICICI -->
+    <article class="card">
+      <img loading="lazy" src="https://cloud9infosystems.com/wp-content/uploads/2024/05/ICICI-Lombard-Logo.png" alt="ICICI Lombard logo" class="logo-theme-aware" style="height: 44px" />
+      <h3>Software Engineer — Data & ML Infrastructure · ICICI Lombard · Mumbai, India</h3>
+      <p class="meta">Jan 2023 – Aug 2024 · PySpark · Databricks · Azure ML · Azure Functions · Cosmos DB · Redis · APIM · TypeScript</p>
+      <ul class="list">
+        <li>Engineered <strong>batch and streaming data services</strong> with <strong>PySpark</strong> and <strong>Databricks</strong> across <strong>5+ sources</strong>, processing roughly <strong>1M+ records/month</strong> for downstream underwriting and claims analytics.</li>
+        <li>Built real-time vehicle telematics ingestion using <strong>Azure Event Hubs</strong> and <strong>Cosmos DB</strong>, with scalable API-backed services supporting high-volume mobile insurance workloads.</li>
+        <li>Shipped <strong>fraud-scoring APIs</strong> using <strong>Random Forest</strong>, <strong>XGBoost</strong>, and <strong>Logistic Regression</strong> behind <strong>Azure API Management</strong>, reducing manual claim review time by <strong>50%</strong>.</li>
+        <li>Productionized an ML-assisted claims pipeline combining <strong>computer vision</strong> and structured vehicle data to estimate damage severity and claim amounts, cutting triage time by <strong>32%</strong>.</li>
+        <li>Built a low-latency <strong>RAG assistant</strong> using <strong>Azure OpenAI</strong>, <strong>Redis</strong>, and hybrid retrieval to answer policy questions, lowering resolution time by <strong>80%</strong> and reducing support load.</li>
+        <li>Orchestrated <strong>train → evaluate → register → deploy</strong> ML workflows in <strong>Azure ML</strong> with <strong>MLflow</strong>, CI/CD gates, shadow releases, rollback checks, fairness validation, and deployment governance.</li>
+        <li>Developed a <strong>TypeScript conversational agent</strong> for Microsoft Teams integrated with SAP SuccessFactors, automating HR workflows for <strong>5,000+ monthly users</strong>.</li>
+      </ul>
+    </article>
+
+    <!-- CloudFront -->
+    <article class="card">
+      <img loading="lazy" src="https://www.cloudfronts.com/wp-content/uploads/2020/07/Webp.net-resizeimage.png" alt="CloudFront Technologies logo" class="logo-theme-aware" style="height: 60px" />
+      <h3>Software Engineer · CloudFront Technologies (DataFronts) · Jersey City, NJ (Remote)</h3>
+      <p class="meta">Aug 2020 – Jan 2023 · Java · Spring Boot · C# · RabbitMQ · Azure · Redis · Neo4j · Kubernetes</p>
+      <ul class="list">
+        <li>Built <strong>event-driven microservices</strong> in <strong>Java Spring Boot</strong> to integrate CRM and ERP platforms including Salesforce, Dynamics 365, SAP, and NAV, with staged releases for zero-downtime deployments.</li>
+        <li>Designed personalization services using <strong>Neo4j</strong> and <strong>Redis</strong>, delivering <strong>sub-100 ms</strong> recommendation APIs for enterprise clients.</li>
+        <li>Automated nightly large-scale data synchronization pipelines on <strong>AKS</strong> with Docker, Kubernetes, and Helm, processing <strong>2M+ records/run</strong> and reducing runtime by <strong>40%</strong>.</li>
+        <li>Implemented asynchronous patterns in backend services to improve throughput by <strong>25%</strong> under peak load and reduce thread blocking in production systems.</li>
+        <li>Built predictive analytics and recommendation systems that improved customer targeting, personalization, and revenue outcomes across client deployments.</li>
+        <li>Served as <strong>DRI</strong> for production data services, leading incident response, on-call rotations, and SLA restoration across a team of <strong>10 engineers</strong>.</li>
+      </ul>
+    </article>
+  </div>
+</section>
 
     <!-- Projects -->
    <section id="projects" aria-labelledby="proj-title">
